@@ -18,22 +18,19 @@ class _SplashScreenState extends State<SplashScreen>
   void initState() {
     super.initState();
 
-   // declaration animation contoller
+    // declaration animation contoller
     _controller = AnimationController(
       vsync: this,
-      duration: Duration(seconds: 2), 
+      duration: Duration(seconds: 2),
     );
 
-   
     _animation = CurvedAnimation(
       parent: _controller!,
-      curve: Curves.easeInOut, 
+      curve: Curves.easeInOut,
     );
 
-  
     _controller?.forward();
 
-  
     _controller?.addStatusListener((status) {
       if (status == AnimationStatus.completed) {
         Navigator.push(
@@ -45,7 +42,7 @@ class _SplashScreenState extends State<SplashScreen>
 // close the animation controller after leave the screen
   @override
   void dispose() {
-    _controller?.dispose(); 
+    _controller?.dispose();
     super.dispose();
   }
 
@@ -66,15 +63,14 @@ class _SplashScreenState extends State<SplashScreen>
         ),
         child: Center(
           child: Column(
-            mainAxisAlignment:
-                MainAxisAlignment.center, 
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               FadeTransition(
                 opacity: _animation!,
                 child: const Text(
                   'Countries App',
                   style: TextStyle(
-                    fontSize: 48,
+                    fontSize: 46,
                     fontWeight: FontWeight.bold,
                     color: Colors.black,
                     letterSpacing: 5,
@@ -82,9 +78,7 @@ class _SplashScreenState extends State<SplashScreen>
                   ),
                 ),
               ),
-              const SizedBox(
-                  height:
-                      20), 
+              const SizedBox(height: 20),
               const SpinKitCircle(
                 color: Colors.blue,
                 //size: 150.0,

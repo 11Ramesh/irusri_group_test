@@ -93,10 +93,10 @@ class _HomeState extends State<Home> {
                 children: [
                   TextShow(
                     text: "Population:   ",
-                    fontSize: 15,
+                    fontSize: 14,
                     fontWeight: FontWeight.bold,
                   ),
-                  TextShow(text: population, fontSize: 15),
+                  TextShow(text: population, fontSize: 14),
                 ],
               ),
               Height(value: 0.03),
@@ -105,7 +105,7 @@ class _HomeState extends State<Home> {
                 children: [
                   TextShow(
                     text: 'Languages:   ',
-                    fontSize: 15,
+                    fontSize: 14,
                     fontWeight: FontWeight.bold,
                   ),
                   Column(
@@ -115,7 +115,7 @@ class _HomeState extends State<Home> {
                         ...languages
                             .map((language) => TextShow(
                                   text: language,
-                                  fontSize: 15,
+                                  fontSize: 14,
                                 ))
                             .toList(),
                       if (languages.isEmpty) Text('Languages: N/A'),
